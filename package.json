@@ -1,0 +1,40 @@
+{
+  "name": "faster-routes",
+  "version": "1.0.4",
+  "main": "dist/index.cjs",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "check": "biome check --write",
+    "dev": "rslib build --watch",
+    "format": "biome format --write"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@rsbuild/plugin-react": "^1.1.1",
+    "@rslib/core": "^0.5.4",
+    "@types/react": "^19.0.10",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^7.0.0",
+    "universal-cookie": "^7.2.2"
+  },
+  "private": false,
+  "dependencies": {
+    "universal-cookie": "^7.2.2"
+  }
+}
