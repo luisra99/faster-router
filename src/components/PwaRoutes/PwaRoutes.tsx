@@ -8,7 +8,6 @@ import {
 import { IPwaRoutesProps } from "../../types/types";
 import PwaGuard from '../Guards/PwaGuard';
 import { JSX } from "react";
-import RoutesMapper from "./RoutesMapper";
 
 /**
  * Componente que define las rutas de la aplicación web progresiva (PWA).
@@ -40,7 +39,46 @@ const PwaRoutes = ({
             </Guard.AuthGuard>
           }
         >
-          <RoutesMapper guard={Guard} routes={routes} />
+          {Object.values(routes).map(
+            ({ path, component: Component, subPath }) => {
+              if (Component && path) {
+                return (
+                  <Route
+                    key={path}
+                    path={path}
+                    element={
+                      <Guard.AuthGuard>
+                        <Component />
+                      </Guard.AuthGuard>
+                    }
+                  />
+                );
+              }
+
+              return (
+                subPath &&
+                Object.values(subPath).map(
+                  ({ path: childPath, component: ChildComponent }) => {
+                    if (ChildComponent && path && childPath) {
+                      const completePath = `${path}${childPath}`;
+                      return (
+                        <Route
+                          key={completePath}
+                          path={completePath}
+                          element={
+                            <Guard.AuthGuard>
+                              <ChildComponent />
+                            </Guard.AuthGuard>
+                          }
+                        />
+                      );
+                    }
+                    return null;
+                  }
+                )
+              );
+            }
+          )}
         </Route>
         <Route
           path={"sign-in"}
