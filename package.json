@@ -1,5 +1,5 @@
 {
-  "name": "faster-routes",
+  "name": "faster-router",
   "version": "1.0.4",
   "main": "dist/index.cjs",
   "type": "module",
