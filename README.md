@@ -7,7 +7,7 @@ Faster Router es un módulo de enrutamiento diseñado para aplicaciones web prog
 Para instalar Faster Router en tu proyecto, ejecuta el siguiente comando:
 
 ```bash
-npm install faster-router
+npm install faster-router-pwa
 ```
 
 ## Uso
@@ -18,14 +18,14 @@ Faster Router proporciona un componente principal llamado `PwaRoutes` que gestio
 
 ```tsx
 import React from 'react';
-import { PwaRoutes } from 'faster-router';
+import { PwaRoutes } from 'faster-router-pwa';
 import DashboardLayout from './components/DashboardLayout';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import LandingPage from './pages/LandingPage';
 import NotFoundPage from './pages/NotFoundPage';
 import CallBackUrlController from './components/CallBackUrlController';
-import { IPWARoutes } from 'faster-router/types';
+import { IPWARoutes } from 'faster-router-pwa/types';
 
 const routes: IPWARoutes = {
   home: {
@@ -60,7 +60,7 @@ export default App;
 Faster Router incluye dos guards por defecto: `AuthGuard` y `AnonymousGuard`. Estos guards se utilizan para proteger rutas que requieren autenticación o que deben ser accesibles solo para usuarios no autenticados, respectivamente.
 
 ```tsx
-import { AuthGuard, AnonymousGuard } from 'faster-router';
+import { AuthGuard, AnonymousGuard } from 'faster-router-pwa';
 
 // Ejemplo de uso de AuthGuard
 <AuthGuard>
@@ -80,7 +80,7 @@ import { AuthGuard, AnonymousGuard } from 'faster-router';
 Las rutas se definen utilizando el tipo `IPWARoutes`, que es un objeto donde las claves son nombres de rutas y los valores son combinaciones de propiedades de rutas de React Router y propiedades personalizadas.
 
 ```tsx
-import { IPWARoutes } from 'faster-router/types';
+import { IPWARoutes } from 'faster-router-pwa/types';
 
 const routes: IPWARoutes = {
   home: {
@@ -136,12 +136,12 @@ Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
 
 ## Licencia
 
-Este proyecto está licenciado bajo la licencia MIT. Consulta el archivo [LICENSE](https://github.com/luisra99/faster-router/blob/main/LICENSE) para más detalles.
+Este proyecto está licenciado bajo la licencia MIT. Consulta el archivo [LICENSE](https://github.com/luisra99/faster-router-pwa/blob/main/LICENSE) para más detalles.
 
 ## Enlaces
 
-- [Repositorio en GitHub](https://github.com/luisra99/faster-router)
-- [Documentación](https://github.com/luisra99/faster-router#readme)
+- [Repositorio en GitHub](https://github.com/luisra99/faster-router-pwa)
+- [Documentación](https://github.com/luisra99/faster-router-pwa#readme)
 
 ---
 
