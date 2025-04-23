@@ -1,6 +1,6 @@
 {
   "name": "faster-router",
-  "version": "1.0.12",
+  "version": "1.0.0",
   "main": "dist/index.cjs",
   "type": "module",
   "exports": {
