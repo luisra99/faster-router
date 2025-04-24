@@ -1,6 +1,6 @@
 {
   "name": "faster-router-pwa",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "dist/index.cjs",
   "type": "module",
   "exports": {
@@ -36,12 +36,11 @@
   "peerDependencies": {
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "react-router-dom": "7.0.0",
     "universal-cookie": "7.2.2"
   },
   "private": false,
   "dependencies": {
-    "react-router-dom": "7.0.0",
+    "react-router-dom": "7.5.2",
     "universal-cookie": "7.2.2"
   }
 }
