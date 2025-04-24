@@ -77,7 +77,6 @@ const PwaRoutes = ({
   routes,
 }: IPwaRoutesProps): JSX.Element => {
   return (
-    <BrowserRouter>
       <Routes>
         <Route
           path="/"
@@ -119,7 +118,6 @@ const PwaRoutes = ({
         <Route path="404" element={<NotFoundPage />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
-    </BrowserRouter>
   );
 };
 export default PwaRoutes;

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { PathRouteProps } from "react-router-dom";
+import { NavigateFunction, PathRouteProps } from "react-router-dom";
 
 /**
  * Props personalizadas para las rutas de la aplicación.
@@ -95,3 +95,5 @@ export type Guard = {
   AuthGuard: React.FC<{ children: React.ReactNode; }>;
   AnonymousGuard: React.FC<{ children: React.ReactNode; }>;
 };
+
+export declare const useSharedNavigate: () => NavigateFunction;
