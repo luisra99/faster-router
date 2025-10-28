@@ -17,7 +17,7 @@
   "description": "Componente de enrutado para la plantilla",
   "repository": {
     "type": "git",
-    "url": "https://github.com/luisra99/faster-router.git"
+    "url": "git+https://github.com/luisra99/faster-router.git"
   },
   "homepage": "https://github.com/luisra99/faster-router#readme",
   "scripts": {
